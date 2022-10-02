@@ -4,25 +4,28 @@
   box-sizing: border-box;
 }
 .navbar{
+
   display: flex;
   align-items:center;
   padding: 20px;
   width: 100%;
+  right: 0;
 }
 header{
   width: 100%;
 }
 body{
   background: radial-gradient(#fff,grey );
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  width: auto;
 }
 
 nav{
-  flex: 1;
+  position: absolute;
+  right: 0px;
   text-align:right;
   float: right;
+  flex:1;
 }
 nav ul{
   display: inline-block;
@@ -58,6 +61,8 @@ hr{
   padding-left:5%;
   padding-right: 2%;
   padding-bottom: 100px;
+
+
 }
 .row{
   padding-top:40px;
@@ -77,7 +82,7 @@ hr{
   margin:30px 0;
 }
 .col-2 p{
-  font-size: 25px;
+  font-size: 1.5625em;
 }
 .btn{
   display: inline-block;
@@ -263,6 +268,8 @@ hr{
  border-radius: 35px;  /* Rounded border */
 }
 
+
+
 /* ------form------ */
 
 input[type=text], select, textarea {
@@ -377,14 +384,39 @@ ul{
   text-align: center;
 }
 
-/* ------media query for menu------ */
-@media only screen and (max-width:800px){
+.menu-icon{
 
-  nav ul{
-    position: absolute;
-    top: 70px;
-    left:0;
-    background #333;
-    width: 100
+  width: 20px;
+  margin-left: 15px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .concolumn-2, .concolumn {
+    width: auto;
+    text-align: left;
+    padding: none;
+  }
+  .prcolumn, .prcolumn-2{
+    width: auto;
+    text-align: left;
+    padding-left
+  }
+  .abcolumn, .abcolumn-2{
+    width:auto;
+    text-align: center;
+    padding-left: 0;
+  }
+  .row{
+    text-align: center;
+    width: auto;
+  }
+  .col-2, .col-3, .col-4{
+    flex-basis: 100%;
+    width: auto;
+  }
+  .prcontainer h1{
+    text-align: center;
   }
 }
